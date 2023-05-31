@@ -1,0 +1,18 @@
+{
+    "Lua.workspace.library": [
+        "C:/Users/red/AppData/Roaming/Code/User/globalStorage/sumneko.lua/addonManager/addons/argparse/module/library",
+        "C:/Users/red/AppData/Roaming/Code/User/globalStorage/sumneko.lua/addonManager/addons/busted/module/library",
+        "${3rd}/luassert/library",
+        "C:/Users/red/AppData/Roaming/Code/User/globalStorage/sumneko.lua/addonManager/addons/cc-tweaked/module/library"
+    ],
+    "Lua.workspace.checkThirdParty": false,
+    "Lua.runtime.version": "Lua 5.1",
+    "files.eol": "\n",
+    "[lua]": {
+        "editor.defaultFormatter": "JohnnyMorganz.stylua"
+    },
+    "[markdown]": {
+        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+    },
+    "prettier.tabWidth": 4
+}

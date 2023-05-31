@@ -1,0 +1,21 @@
+[submodule "submodules/say"]
+	path = submodules/say
+	url = https://github.com/lunarmodules/say.git
+[submodule "submodules/Penlight"]
+	path = submodules/Penlight
+	url = https://github.com/lunarmodules/Penlight.git
+[submodule "submodules/mediator_lua"]
+	path = submodules/mediator_lua
+	url = https://github.com/Olivine-Labs/mediator_lua
+[submodule "submodules/busted"]
+	path = submodules/busted
+	url = https://github.com/lunarmodules/busted.git
+[submodule "submodules/luassert"]
+	path = submodules/luassert
+	url = https://github.com/lunarmodules/luassert.git
+[submodule "submodules/LuaFileSystem"]
+	path = submodules/LuaFileSystem
+	url = https://github.com/Commandcracker/CC-LuaFileSystem.git
+[submodule "submodules/CC-LuaSystem"]
+	path = submodules/CC-LuaSystem
+	url = https://github.com/Commandcracker/CC-LuaSystem.git
