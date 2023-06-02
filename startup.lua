@@ -55,13 +55,12 @@ local ok, error = pcall(function()
     env.require("busted.runner")({ standalone = false, output = "computercraft" })
 end)
 
-if not ok and error then
-    local ESC = string.char(27)
-    print(("%s[31m[busted.runner] %s%s[0m"):format(ESC, error, ESC))
+if not ok then
+    if error then
+        local ESC = string.char(27)
+        print(("%s[31m[busted.runner] %s%s[0m"):format(ESC, error, ESC))
+    end
+    os.shutdown(42) -- best error code ever
 end
 
-shell.run("ls /lib")
-shell.run("ls /lib/lfs")
-
-sleep(4)
 os.shutdown()

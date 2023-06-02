@@ -1,11 +1,13 @@
 {
     "Lua.workspace.library": [
-        "C:/Users/red/AppData/Roaming/Code/User/globalStorage/sumneko.lua/addonManager/addons/argparse/module/library",
-        "C:/Users/red/AppData/Roaming/Code/User/globalStorage/sumneko.lua/addonManager/addons/busted/module/library",
+        "/home/red/.config/VSCodium/User/globalStorage/sumneko.lua/addonManager/addons/penlight/module/library",
+        "/home/red/.config/VSCodium/User/globalStorage/sumneko.lua/addonManager/addons/busted/module/library",
+        "/home/red/.config/VSCodium/User/globalStorage/sumneko.lua/addonManager/addons/cc-tweaked/module/library",
+        "/home/red/.config/VSCodium/User/globalStorage/sumneko.lua/addonManager/addons/argparse/module/library",
         "${3rd}/luassert/library",
-        "C:/Users/red/AppData/Roaming/Code/User/globalStorage/sumneko.lua/addonManager/addons/cc-tweaked/module/library"
+        "${3rd}/lfs/library"
     ],
-    "Lua.workspace.checkThirdParty": false,
+    "Lua.workspace.checkThirdParty": true,
     "Lua.runtime.version": "Lua 5.1",
     "files.eol": "\n",
     "[lua]": {
@@ -14,5 +16,6 @@
     "[markdown]": {
         "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
     },
-    "prettier.tabWidth": 4
+    "prettier.tabWidth": 4,
+    "Lua.diagnostics.globals": ["lfs"]
 }

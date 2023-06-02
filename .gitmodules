@@ -19,3 +19,9 @@
 [submodule "submodules/CC-LuaSystem"]
 	path = submodules/CC-LuaSystem
 	url = https://github.com/Commandcracker/CC-LuaSystem.git
+[submodule "submodules/lua_cliargs"]
+	path = submodules/lua_cliargs
+	url = https://github.com/amireh/lua_cliargs.git
+[submodule "submodules/lua-term"]
+	path = submodules/lua-term
+	url = https://github.com/hoelzro/lua-term.git
