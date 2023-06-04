@@ -17,5 +17,11 @@
         "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
     },
     "prettier.tabWidth": 4,
-    "Lua.diagnostics.globals": ["lfs"]
+    "Lua.diagnostics.globals": [
+        "lfs",
+        "_ENV",
+        "bit32",
+        "_G"
+    ],
+    "ansible.python.interpreterPath": "/bin/python"
 }

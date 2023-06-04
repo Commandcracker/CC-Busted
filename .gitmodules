@@ -25,3 +25,6 @@
 [submodule "submodules/lua-term"]
 	path = submodules/lua-term
 	url = https://github.com/hoelzro/lua-term.git
+[submodule "submodules/craftos-pc-tweaks"]
+	path = submodules/craftos-pc-tweaks
+	url = git@github.com:Commandcracker/craftos-pc-tweaks.git

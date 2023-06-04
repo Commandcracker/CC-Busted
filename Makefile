@@ -10,6 +10,7 @@ run:
 	$(CRAFTOS) \
 		--id 42 \
 		--mount-ro /=./ \
+		--mount-ro /=./submodules/craftos-pc-tweaks/lua \
 		--mount-ro /lib/luassert=./submodules/luassert/src \
 		--mount-ro /lib/system=./submodules/CC-LuaSystem/system \
 		--mount-ro /lib/lfs=./submodules/LuaFileSystem/lfs \

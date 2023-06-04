@@ -1,5 +1,9 @@
 -- Busted runner for ComputerCraft
 -- Made for headless craftos-pc
+
+require("colors_to_ansi_escape_sequences")
+require("disable_word_wrapping")
+
 -- https://tweaked.cc/library/cc.require.html
 local r = require("cc.require")
 
