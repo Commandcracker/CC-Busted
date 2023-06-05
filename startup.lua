@@ -3,6 +3,7 @@
 
 require("colors_to_ansi_escape_sequences")
 require("disable_word_wrapping")
+require("redirect_single")
 
 -- https://tweaked.cc/library/cc.require.html
 local r = require("cc.require")
@@ -55,8 +56,14 @@ local env = setmetatable({}, {
 -- Set up the require function and package table for the environment
 env.require, env.package = r.make(env, "/lib")
 
+--[[ Fix for busted.runner
+    Code: package.cpath = (cliArgs.cpath .. ';' .. package.cpath):gsub(';;',';')
+    Eror: attempt to concatenate field 'cpath' (a nil value)
+]]
+env.package.cpath = ""
+
 local ok, error = pcall(function()
-    env.require("busted.runner")({ standalone = false, output = "computercraft" })
+    env.require("busted.runner")({ standalone = false })
 end)
 
 if not ok then
