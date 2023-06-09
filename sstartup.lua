@@ -1,10 +1,6 @@
 -- Busted runner for ComputerCraft
 -- Made for headless craftos-pc
 
-require("colors_to_ansi_escape_sequences")
-require("disable_word_wrapping")
-require("redirect_single")
-
 -- https://tweaked.cc/library/cc.require.html
 local r = require("cc.require")
 
@@ -61,6 +57,16 @@ env.require, env.package = r.make(env, "/lib")
     Eror: attempt to concatenate field 'cpath' (a nil value)
 ]]
 env.package.cpath = ""
+
+-- Handle exit calls in busted.runner (busted.compatibility)
+function env.os.exit(code)
+    os.shutdown(code)
+end
+
+-- Pass arguments
+for key, value in pairs({ ... }) do
+    env.arg[key] = value
+end
 
 local ok, error = pcall(function()
     env.require("busted.runner")({ standalone = false })

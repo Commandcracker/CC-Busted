@@ -1,0 +1,10 @@
+describe("Test Item Class", function()
+    it("Creates an item", function()
+        error("this should fail")
+    end)
+    describe("Test Tags", function()
+        it("Creates a tag", function()
+
+        end)
+    end)
+end)

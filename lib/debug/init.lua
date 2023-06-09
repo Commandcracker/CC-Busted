@@ -1,8 +1,4 @@
--- Commandcracker
--- luafilesystem for CC
--- https://lunarmodules.github.io/luafilesystem/manual.html
-
-local debug = {}
-
+-- by Commandcracker
+-- debug for ComputerCraft
 
 return debug
