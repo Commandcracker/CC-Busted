@@ -1,0 +1,37 @@
+name: CraftOS-PC Action
+on:
+    workflow_dispatch:
+    push:
+        branches:
+            - main
+
+jobs:
+    sea:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout 🛎️
+              uses: actions/checkout@v4
+              with:
+                  submodules: true
+
+            - name: mkdir out
+              run: mkdir out
+
+            - name: CraftOS-PC >_
+              uses: Commandcracker/craftos-pc-action@v1
+              with:
+                  options: --mount-rw /out=./out
+                      --mount-ro /rom/autorun=./submodules/craftos-pc-tweaks/lua
+                      --mount-ro /lib/busted=./submodules/busted/busted
+                      --mount-ro /lib/system=./submodules/CC-LuaSystem/system
+                      --mount-ro /lib/luassert=./submodules/luassert/src
+                      --mount-ro /lib/lfs=./submodules/LuaFileSystem/lfs
+                      --mount-ro /lib/pl=./submodules/Penlight/lua/pl
+                      --mount-ro /lib/say=./submodules/say/src/say
+                      --mount-ro /lib/cliargs=./submodules/lua_cliargs/src/cliargs
+
+            - name: upload artifact
+              uses: actions/upload-artifact@v3
+              with:
+                  name: SEA
+                  path: out/install.lua
